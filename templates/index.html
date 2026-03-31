@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock vs Mine Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            background: linear-gradient(#ccc, #5a67d8);
+            color: black;
+            padding: 30px;
+            margin: 80px auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 90%;
+            height: 120px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            background-color: cornsilk;
+            color: black;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .note {
+            font-size: 14px;
+            color: black;
+        }
+
+        .accuracy-box {
+            margin-top: 20px;
+            padding: 10px;
+            background: linear-gradient(to right, rgb(215, 233, 223), #d9b0f5);
+            border-radius: 8px;
+        }
+
+        .accuracy-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .accuracy-box li {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .model-info {
+            margin-top: 15px;
+            font-size: 16px;
+            background: linear-gradient(#a18cd1, #fbc2eb);
+            padding: 8px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rock vs Mine Prediction</h1>
+        <p class="note">Enter 60 sonar values separated by commas</p>
+
+        <form action="/predict" method="post">
+            <textarea name="sonar_data" placeholder="Example: 0.02,0.03,0.04,..."></textarea>
+            <br>
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Prediction Result -->
+        {% if prediction_text %}
+            <div class="result">
+                {{ prediction_text }}
+            </div>
+        {% endif %}
+
+        <!-- Accuracy Section -->
+        {% if accuracy %}
+            <div class="accuracy-box">
+                <h3>Model Accuracies</h3>
+                <ul>
+                    <li>Logistic Regression: {{ (accuracy['Logistic Regression'] * 100) | round(2) }}%</li>
+                    <li>KNN: {{ (accuracy['KNN'] * 100) | round(2) }}%</li>
+                    <li>SVM: {{ (accuracy['SVM'] * 100) | round(2) }}%</li>
+                </ul>
+            </div>
+        {% endif %}
+
+        <!-- Best Model Info -->
+        {% if prediction_text %}
+            <div class="model-info">
+                Model Used: <b>{{ best_model }}</b>
+                <p>This model achieved the highest accuracy among all trained models.</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
