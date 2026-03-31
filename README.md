@@ -41,20 +41,29 @@ VS Code
 ⚙️ Workflow
 
 Data Collection
+
 Data Preprocessing
+
 Exploratory Data Analysis (EDA)
+
 Splitting data into training and testing sets
+
 Model Training and scaling
+
 Model Evaluation
+
 Prediction
 
 🤖 Model Used
 
 Logistic Regression
+
 KNN classifier
+
 SVM (linear kernel)
 
 📈 Model Performance
+
 
 | Model                  | Accuracy |
 |------------------------|----------|
@@ -64,6 +73,7 @@ SVM (linear kernel)
 
 
 📂 Project Structure
+
 
 rock-vs-mine-project/
 │
