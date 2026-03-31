@@ -1,4 +1,5 @@
 🚀 Rock vs Mine Prediction using Machine Learning
+
 📌 Project Overview
 This project uses machine learning to predict whether an object detected by sonar is a Rock or a Mine. 
 The system is built with Python and deployed via a Flask web application, allowing users to input sonar data and get real-time predictions.
