@@ -19,16 +19,23 @@ Achieve high prediction accuracy using ML techniques
 The dataset used is the Sonar Dataset
 It contains 60 numerical features representing sonar signals
 Each instance is labeled as:
+
 R → Rock
+
 M → Mine
 
 🛠️ Technologies Used
 
 Python 
+
 NumPy
+
 Pandas
+
 Scikit-learn
+
 flask
+
 VS Code
 
 ⚙️ Workflow
