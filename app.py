@@ -41,7 +41,7 @@ def predict():
         input_array = np.asarray(input_float).reshape(1, -1)
 
         # Make prediction
-        model = models[best_model]
+        model = models[best_model] # selects best model amon the models
         prediction = model.predict(input_array)
 
         result = "The object is Rock" if prediction[0] == 'R' else "The object is Mine"
