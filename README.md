@@ -1,4 +1,4 @@
-🚀 Rock vs Mine Prediction using Machine Learning 🚢
+**🚀 Rock vs Mine Prediction using Machine Learning 🚢**
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 📌 Project Overview
@@ -106,4 +106,4 @@ rock-vs-mine-project/
 └── README.md
 
 
-The Sonar dataset for this project is taken from "Kaggle".
+**NOTE:-** The Sonar dataset for this project is taken from "Kaggle".
