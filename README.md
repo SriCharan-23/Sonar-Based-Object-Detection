@@ -1,4 +1,4 @@
-**🚀 Rock vs Mine Prediction using Machine Learning 🚢**
+**🚀 Sonar Based Object Detection using Machine Learning 🚢**
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 📌 Project Overview
