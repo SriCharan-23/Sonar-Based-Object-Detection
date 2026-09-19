@@ -107,3 +107,6 @@ rock-vs-mine-project/
 
 
 **NOTE:-** The Sonar dataset for this project is taken from "Kaggle".
+
+## Deployed on Render 
+Link :- https://sonar-based-object-detection-2.onrender.com/
